@@ -1,0 +1,34 @@
+.stock-table-container {
+  background-color: #fdfdfd;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #bbb;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  
+  & .stock-table-content {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  & table {
+    border: 1px solid #bbb;
+    border-radius: 0.5rem;
+
+    & th, td {
+      padding: 0.3rem 0.6rem;
+    }
+
+    & tbody tr:nth-child(odd) {
+      background-color: #efefef;
+    }
+
+    & tbody tr:nth-child(even) {
+      background-color: #fbfbfb;
+    }
+  }
+
+  
+}
+
