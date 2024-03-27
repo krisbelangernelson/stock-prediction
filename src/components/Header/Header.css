@@ -1,15 +1,21 @@
-header {
+header { 
   display: flex;
-  flex-direction: row;
   justify-content: center;
   background-color: #555;
   width: 100%;
   border-radius: 1rem;
-  margin-top: 1rem;
+  
 }
 
 header .title {
-  font-size: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 600;
-  color: #eee;
+  color: #a5fc9d;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
 }

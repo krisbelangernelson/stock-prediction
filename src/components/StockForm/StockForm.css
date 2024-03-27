@@ -1,0 +1,61 @@
+.stock-form {
+  background-color: #fdfdfd;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #bbb;
+  margin-top: 1rem;
+}
+
+.stock-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem 0;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 0 5rem;
+  }
+}
+
+.stock-list {
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  
+  & .stock-list-item {
+    grid-column: 1;
+  }
+}
+
+.social-media-info{
+  min-width: 10rem;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.social-count {
+  margin-top: 0.5rem;
+}
+
+.time-window {
+  & .time-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & select {
+    background-color: #fff;
+    color: #1a1a1a;
+    border: 1px solid #bbb;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
