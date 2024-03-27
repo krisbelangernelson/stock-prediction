@@ -20,11 +20,11 @@
 }
 
 .stock-list {
-  display: grid;
-  grid-template-columns: 100% 1fr;
+  display: flex;
+  justify-content: center; 
   
-  & .stock-list-item {
-    grid-column: 1;
+  & .stock-list-items {
+    text-align: left;
   }
 }
 
@@ -44,6 +44,7 @@
 .time-window {
   & .time-title {
     font-size: 1.2rem;
+    line-height: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
@@ -53,6 +54,7 @@
     border: 1px solid #bbb;
     border-radius: 0.25rem;
     padding: 0.25rem 0.5rem;
+    font-size: 1rem;
 
     &:hover {
       background-color: #eee;

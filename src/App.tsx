@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import StockForm from './components/StockForm'
+import StockTable from './components/StockTable'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <StockForm />
+        <StockTable />
       </main>
     </div>
   )

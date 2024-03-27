@@ -5,12 +5,12 @@ import TimeWindow from './TimeWindow';
 
 export default function StockForm() {
   return (
-    <div className="stock-form">
+    <section className="stock-form">
       <div className="stock-form-content">
         <StockList />
         <SocialMediaInfo />
         <TimeWindow />
       </div>
-    </div>
+    </section>
   )
 }
