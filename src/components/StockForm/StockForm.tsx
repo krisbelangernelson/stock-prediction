@@ -3,7 +3,7 @@ import SocialMediaInfo from './SocialMediaInfo';
 import './StockForm.css'
 import StockList from './StockList';
 import TimeWindow from './TimeWindow';
-import companies from "../../mocks/data/companyData"
+import companies from '../../mocks/data/companyData'
 
 export interface StockProps {
   setStock: Dispatch<SetStateAction<string>>
@@ -26,7 +26,7 @@ export default function StockForm(props: StockFormProps) {
       <div className="stock-form-content">
         <StockList stock={stock} setStock={setStock} />
         {company && <SocialMediaInfo company={company} />}
-        <TimeWindow timeWindow={timeWindow} setTimeWindow={setTimeWindow} />
+        {company && <TimeWindow timeWindow={timeWindow} setTimeWindow={setTimeWindow} />}
       </div>
     </section>
   )

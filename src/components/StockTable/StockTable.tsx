@@ -1,6 +1,24 @@
+import { useMemo } from 'react'
+import { getMockData } from '../../utils/generateMockData'
+import recommendationRating from '../../utils/recommendationRating'
 import './StockTable.css'
 
-export default function StockTable() {
+interface StockTableProps {
+  stock: string
+  timeWindow: string
+}
+
+export default function StockTable(props: StockTableProps) {
+  const { stock, timeWindow } = props
+
+  console.log('stock', stock)
+  console.log('timeWindow', timeWindow)
+  const data = useMemo(() => {
+    if (!stock || !timeWindow) return []
+    return getMockData(stock, Number(timeWindow))
+  }, [stock, timeWindow])
+  console.log('data', data)
+
   return (
     <div className="stock-table-container">
       <div className="stock-table-content">
@@ -9,23 +27,21 @@ export default function StockTable() {
             <tr>
               <th>Symbol</th>
               <th>Price</th>
+              <th>Social Posts</th>
               <th>Rating</th>
               <th>Date</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>META</td>
-              <td>70</td>
-              <td>Sell</td>
-              <td>2024-03-27</td>
-            </tr>
-            <tr>
-              <td>META</td>
-              <td>70</td>
-              <td>Sell</td>
-              <td>2024-03-27</td>
-            </tr>
+            {data.map(({ date, price, socialMediaCount }) => (
+              <tr key={price}>
+                <td>{stock}</td>
+                <td>{price}</td>
+                <td>{socialMediaCount}</td>
+                <td>{recommendationRating(price, socialMediaCount).toUpperCase()}</td>
+                <td>{date}</td>
+              </tr>
+            ))}
           </tbody>
 
         </table>

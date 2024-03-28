@@ -1,5 +1,4 @@
 export function getMockData(symbol: string, daysAgo: number) {
-  if (!symbol || !daysAgo) return []
   const allDates = []
 
   for (let i = 0; i < daysAgo; i++) {
@@ -9,11 +8,10 @@ export function getMockData(symbol: string, daysAgo: number) {
 
   const char = parseInt(symbol.charAt(0), 36) - 9
 
-  return {
-    [symbol]: allDates.map((date, i) => {
-      const price = Math.random() * char * 10
-      const count = price * (i + 1)
-      return { date, price: Number(price.toFixed(2)), socialMediaCount: Number(count.toFixed(2)) }
-    })
-  }
+  return allDates.map((date, i) => {
+    const price = Math.random() * char * 10
+    const count = (Math.random() * 10 + Math.random() * 10) * 10
+
+    return { date, price: Number(price.toFixed(2)), socialMediaCount: Number(count.toFixed(2)) }
+  })
 }
