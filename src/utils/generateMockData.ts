@@ -1,5 +1,5 @@
 export function getMockData(symbol: string, daysAgo: number) {
-  if (!symbol) return []
+  if (!symbol || !daysAgo) return []
   const allDates = []
 
   for (let i = 0; i < daysAgo; i++) {
@@ -13,7 +13,7 @@ export function getMockData(symbol: string, daysAgo: number) {
     [symbol]: allDates.map((date, i) => {
       const price = Math.random() * char * 10
       const count = price * (i + 1)
-      return { date, price: price.toFixed(2), socialMediaCount: count.toFixed(2) }
+      return { date, price: Number(price.toFixed(2)), socialMediaCount: Number(count.toFixed(2)) }
     })
   }
 }

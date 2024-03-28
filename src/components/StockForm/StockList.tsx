@@ -1,29 +1,16 @@
-import { StockFormProps } from "./StockForm"
+import { StockProps } from "./StockForm"
+import StockListItem from "./StockListItem"
+import companies from "../../mocks/data/companyData"
 
-interface StockListProps extends StockFormProps { }
+interface StockListProps extends StockProps { }
 
 export default function StockList(props: StockListProps) {
   const { setStock, stock } = props
-
   return (
     <div className="stock-list">
       <div className="stock-list-items">
-        <div className="stock-list-item">
-          <input type="radio" id="meta" name="stockPick" value="meta" onChange={(e) => setStock(e.target.value)} checked={stock === 'meta'} />
-          <label htmlFor="meta">META</label>
-        </div>
-        <div className="stock-list-item">
-          <input type="radio" id="twitter" name="stockPick" value="twitter" onChange={(e) => setStock(e.target.value)} checked={stock === 'twitter'} />
-          <label htmlFor="twitter">TWTR</label>
-        </div>
+        {companies.map((company) => <StockListItem key={company.symbol} stock={stock} setStock={setStock} symbol={company.symbol} />)}
       </div>
-
     </div>
   )
 }
-
-
-// youtube
-// instagram
-// tiktok
-// x/twitter

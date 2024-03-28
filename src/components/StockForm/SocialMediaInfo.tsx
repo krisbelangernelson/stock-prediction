@@ -1,8 +1,16 @@
-export default function SocialMediaInfo() {
+interface SocialMediaInfoProps {
+  company: {
+    symbol: string
+    name: string
+  }
+}
+
+export default function SocialMediaInfo(props: SocialMediaInfoProps) {
+  const { company } = props
+
   return (
     <div className="social-media-info">
-      <div className="company-name">Company name</div>
-      <div className="social-count">Social Media Count: <span>600</span></div>
+      <div className="company-name">{company.name}</div>
     </div>
   )
 }
