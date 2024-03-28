@@ -10,25 +10,34 @@
     padding: 1rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
+    & .table {
+      display: flex;
+      justify-content: center;
+    }
+
+    & table {
+      border: 1px solid #bbb;
+      border-radius: 0.5rem;
+
+      & th {
+        background-color: #fbfbfb;
+      }
+
+      & th, td {
+        padding: 0.3rem 0.6rem;
+      }
+
+      & tbody tr:nth-child(odd) {
+        background-color: #efefef;
+      }
+
+      & tbody tr:nth-child(even) {
+        background-color: #fbfbfb;
+      }
+    }
   }
 
-  & table {
-    border: 1px solid #bbb;
-    border-radius: 0.5rem;
-
-    & th, td {
-      padding: 0.3rem 0.6rem;
-    }
-
-    & tbody tr:nth-child(odd) {
-      background-color: #efefef;
-    }
-
-    & tbody tr:nth-child(even) {
-      background-color: #fbfbfb;
-    }
-  }
-
-  
 }
 

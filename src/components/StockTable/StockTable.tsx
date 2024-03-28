@@ -16,32 +16,34 @@ export default function StockTable(props: StockTableProps) {
     return getMockData(stock, Number(timeWindow))
   }, [stock, timeWindow])
 
+  if (!stock) return (<h2>Select a social media stock</h2>)
+
   return (
     <div className="stock-table-container">
       <div className="stock-table-content">
-        <table cellPadding={0} cellSpacing={0}>
-          <thead>
-            <tr>
-              <th>Symbol</th>
-              <th>Price</th>
-              <th>Social Posts</th>
-              <th>Rating</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(({ date, price, socialMediaCount }) => (
-              <tr key={price}>
-                <td>{stock}</td>
-                <td>{price}</td>
-                <td>{socialMediaCount}</td>
-                <td>{recommendationRating(price, socialMediaCount).toUpperCase()}</td>
-                <td>{date}</td>
+        <h2>Recommendataions for {stock}</h2>
+        <div className="table">
+          <table cellPadding={0} cellSpacing={0}>
+            <thead>
+              <tr>
+                <th>Price</th>
+                <th>Social Posts</th>
+                <th>Rating</th>
+                <th>Date</th>
               </tr>
-            ))}
-          </tbody>
-
-        </table>
+            </thead>
+            <tbody>
+              {data.map(({ date, price, socialMediaCount }) => (
+                <tr key={price}>
+                  <td>{price}</td>
+                  <td>{socialMediaCount}</td>
+                  <td>{recommendationRating(price, socialMediaCount).toUpperCase()}</td>
+                  <td>{date}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   )
