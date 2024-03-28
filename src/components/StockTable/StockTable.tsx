@@ -11,13 +11,10 @@ interface StockTableProps {
 export default function StockTable(props: StockTableProps) {
   const { stock, timeWindow } = props
 
-  console.log('stock', stock)
-  console.log('timeWindow', timeWindow)
   const data = useMemo(() => {
     if (!stock || !timeWindow) return []
     return getMockData(stock, Number(timeWindow))
   }, [stock, timeWindow])
-  console.log('data', data)
 
   return (
     <div className="stock-table-container">
