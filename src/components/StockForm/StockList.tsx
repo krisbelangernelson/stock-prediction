@@ -1,15 +1,15 @@
-import { StockProps } from "./StockForm"
 import StockListItem from "./StockListItem"
 import companies from "../../mocks/data/companyData"
+import { StockListProps } from "../../types/stock"
 
-interface StockListProps extends StockProps { }
+
 
 export default function StockList(props: StockListProps) {
-  const { setStock, stock } = props
+  const { setStockSelected, stockSelected } = props
   return (
     <div className="stock-list">
       <div className="stock-list-items">
-        {companies.map((company) => <StockListItem key={company.symbol} stock={stock} setStock={setStock} symbol={company.symbol} />)}
+        {companies.map((company) => <StockListItem key={company.symbol} stockSelected={stockSelected} setStockSelected={setStockSelected} symbol={company.symbol} />)}
       </div>
     </div>
   )

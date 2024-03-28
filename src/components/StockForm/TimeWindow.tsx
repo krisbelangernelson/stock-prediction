@@ -1,4 +1,4 @@
-import { TimeWindowProps } from "./StockForm"
+import { TimeWindowProps } from "../../types/stock"
 
 export default function TimeWindow(props: TimeWindowProps) {
   const { setTimeWindow, timeWindow } = props

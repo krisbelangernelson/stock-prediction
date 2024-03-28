@@ -1,15 +1,11 @@
-import { StockProps } from "./StockForm"
+import { StockListItemProps } from "../../types/stock"
 
-interface StockListProps extends StockProps {
-  symbol: string
-}
-
-export default function StockListItem(props: StockListProps) {
-  const { setStock, stock, symbol } = props
+export default function StockListItem(props: StockListItemProps) {
+  const { setStockSelected, stockSelected, symbol } = props
 
   return (
     <div className="stock-list-item">
-      <input type="radio" id={symbol} name="stockPick" value={symbol} onChange={(e) => setStock(e.target.value)} checked={stock === symbol} />
+      <input type="radio" id={symbol} name="stockPick" value={symbol} onChange={(e) => setStockSelected(e.target.value)} checked={stockSelected === symbol} />
       <label htmlFor={symbol}>{symbol}</label>
     </div>
   )

@@ -1,9 +1,4 @@
-interface SocialMediaInfoProps {
-  company: {
-    symbol: string
-    name: string
-  }
-}
+import { SocialMediaInfoProps } from "../../types/stock"
 
 export default function SocialMediaInfo(props: SocialMediaInfoProps) {
   const { company } = props

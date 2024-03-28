@@ -3,7 +3,7 @@ export function getMockData(symbol: string, daysAgo: number) {
 
   for (let i = 0; i < daysAgo; i++) {
     const newDate = new Date(Date.now() - i * 24 * 60 * 60 * 1000).toLocaleString('en-US', { timeZone: 'America/New_York' }).split(',')[0]
-    allDates.unshift(newDate)
+    allDates.push(newDate)
   }
 
   const char = parseInt(symbol.charAt(0), 36) - 9
