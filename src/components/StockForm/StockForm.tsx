@@ -25,8 +25,8 @@ export default function StockForm(props: StockFormProps) {
     <section className="stock-form">
       <div className="stock-form-content">
         <StockList stock={stock} setStock={setStock} />
-        {company && <SocialMediaInfo company={company} />}
-        {company && <TimeWindow timeWindow={timeWindow} setTimeWindow={setTimeWindow} />}
+        {company ? <TimeWindow timeWindow={timeWindow} setTimeWindow={setTimeWindow} /> : <div />}
+        {company ? <SocialMediaInfo company={company} /> : <h2>Select a social media stock</h2>}
       </div>
     </section>
   )

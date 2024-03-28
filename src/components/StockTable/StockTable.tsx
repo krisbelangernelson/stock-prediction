@@ -16,8 +16,7 @@ export default function StockTable(props: StockTableProps) {
     return getMockData(stock, Number(timeWindow))
   }, [stock, timeWindow])
 
-  if (!stock) return (<h2>Select a social media stock</h2>)
-
+  if (!stock) return null
   return (
     <div className="stock-table-container">
       <div className="stock-table-content">
