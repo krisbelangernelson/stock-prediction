@@ -19,7 +19,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true
   },
   "include": ["src"],
+  "exclude": ["coverage", "jest.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
