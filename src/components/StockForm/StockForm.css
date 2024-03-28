@@ -30,12 +30,14 @@
 
 .social-media-info{
   min-width: 10rem;
+
+  & .company-name {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
 
-.company-name {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
+
 
 .time-window {
   & .time-title {
