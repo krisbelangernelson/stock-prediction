@@ -6,7 +6,10 @@ export default function TimeWindow(props: TimeWindowProps) {
     <div className="time-window">
       <div>
         <div className="time-title">Time Window</div>
-        <select name="timeWindow" id="select-time" value={timeWindow} onChange={(e) => { setTimeWindow(e.target.value) }}>
+        <label htmlFor="select-time">
+          Time Window
+        </label>
+        <select role="combobox" name="timeWindow" id="select-time" value={timeWindow} onChange={(e) => { setTimeWindow(e.target.value) }} data-testid="select-time">
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="20">20</option>

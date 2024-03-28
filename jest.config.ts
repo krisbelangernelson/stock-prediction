@@ -9,18 +9,31 @@ const config: Config = {
   coverageDirectory: '<rootDir>/coverage',
   coverageThreshold: {
     global: {
-      statements: 90,
-      branches: 90,
-      functions: 90,
-      lines: 90
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100
     }
   },
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!<rootDir>/**/index.ts',
+    '!<rootDir>/**/*.d.ts',
+    '!<rootDir>/jest.config.ts',
+    '!<rootDir>/vite.config.ts',
+    '!<rootDir>/src/main.tsx'
+  ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  clearMocks: true,
+  moduleNameMapper: {
+    '\\.(css)$': '<rootDir>/src/mocks/styleMock.ts',
+  },
+  setupFilesAfterEnv: [
+    '<rootDir>/setupJest.ts'
+  ],
 };
 
 export default config;
