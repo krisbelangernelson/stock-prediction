@@ -15,13 +15,14 @@
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    gap: 0 5rem;
+    gap: 0 4rem;
   }
 }
 
 .stock-list {
   display: flex;
   justify-content: center; 
+  min-width: 5rem;;
   
   & .stock-list-items {
     text-align: left;
@@ -34,6 +35,27 @@
   & .company-name {
     font-size: 1.5rem;
     line-height: 1.5rem;
+  }
+
+  & .social-data {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    overflow: auto;
+
+    & .data-headers {
+      text-align: left;
+
+      & > div {
+        font-weight: 600;
+      }
+    }
+
+    & .data-row {
+      & > div {
+        padding: 0 0.3rem;
+      }
+    }
   }
 }
 

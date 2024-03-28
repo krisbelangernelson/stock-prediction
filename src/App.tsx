@@ -18,7 +18,7 @@ function App() {
     <div className="wrapper">
       <Header />
       <main>
-        <StockForm stockSelected={stockSelected} setStockSelected={setStockSelected} timeWindow={timeWindow} setTimeWindow={setTimeWindow} />
+        <StockForm stockSelected={stockSelected} setStockSelected={setStockSelected} timeWindow={timeWindow} setTimeWindow={setTimeWindow} data={data} />
         <StockTable stockSelected={stockSelected} data={data} />
       </main>
     </div>

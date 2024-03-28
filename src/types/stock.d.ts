@@ -11,7 +11,7 @@ export interface TimeWindowProps {
   timeWindow: string
 }
 
-export interface StockFormProps extends StockProps, TimeWindowProps { }
+export interface StockFormProps extends StockProps, TimeWindowProps { data: ApiData }
 
 export interface StockListProps extends StockProps { }
 
@@ -24,6 +24,7 @@ export interface SocialMediaInfoProps {
     symbol: string
     name: string
   }
+  data: ApiData
 }
 
 export interface StockTableProps {

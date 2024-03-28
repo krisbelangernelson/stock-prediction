@@ -24,7 +24,7 @@ export default function StockTable(props: StockTableProps) {
             <tbody>
               {data.map(({ date, price, socialMediaCount }) => (
                 <tr key={price}>
-                  <td>{price}</td>
+                  <td>${price}</td>
                   <td>{socialMediaCount}</td>
                   <td>{recommendationRating(price, socialMediaCount).toUpperCase()}</td>
                   <td>{date}</td>

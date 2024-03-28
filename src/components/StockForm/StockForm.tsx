@@ -7,7 +7,7 @@ import companies from '../../mocks/data/companyData'
 import { StockFormProps } from '../../types/stock';
 
 export default function StockForm(props: StockFormProps) {
-  const { setStockSelected, stockSelected, timeWindow, setTimeWindow } = props
+  const { setStockSelected, stockSelected, timeWindow, setTimeWindow, data } = props
   const company = companies.find((company) => company.symbol === stockSelected)
 
   return (
@@ -15,7 +15,7 @@ export default function StockForm(props: StockFormProps) {
       <div className="stock-form-content">
         <StockList stockSelected={stockSelected} setStockSelected={setStockSelected} />
         {company ? <TimeWindow timeWindow={timeWindow} setTimeWindow={setTimeWindow} /> : <div />}
-        {company ? <SocialMediaInfo company={company} /> : <h2>Select a social media stock</h2>}
+        {company ? <SocialMediaInfo company={company} data={data} /> : <h2>Select a social media stock</h2>}
       </div>
     </section>
   )
