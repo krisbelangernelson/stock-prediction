@@ -1,4 +1,5 @@
 import { TimeWindowProps } from "../../types/stock"
+import './TimeWindow.css'
 
 export default function TimeWindow(props: TimeWindowProps) {
   const { setTimeWindow, timeWindow } = props
@@ -12,7 +13,6 @@ export default function TimeWindow(props: TimeWindowProps) {
           <option value="20">20</option>
         </select>
       </div>
-
     </div>
   )
 }

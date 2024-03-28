@@ -26,6 +26,26 @@
   
   & .stock-list-items {
     text-align: left;
+
+    & .items-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      & div:has(> svg) {
+        cursor: pointer;
+        padding-top: 0.4rem;
+        padding-right: 0.25rem;
+
+        & > svg {
+          fill: #ccc;
+        }
+
+        & > svg:hover path {
+          fill: #ff6868
+        }
+      }
+    }
   }
 }
 
@@ -55,29 +75,6 @@
       & > div {
         padding: 0 0.3rem;
       }
-    }
-  }
-}
-
-
-
-.time-window {
-  & .time-title {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  & select {
-    background-color: #fff;
-    color: #1a1a1a;
-    border: 1px solid #bbb;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-
-    &:hover {
-      background-color: #eee;
     }
   }
 }
