@@ -21,7 +21,7 @@ export default function StockTable(props: StockTableProps) {
   return (
     <div className="stock-table-container">
       <div className="stock-table-content">
-        <h2>Recommendataions for {stock}</h2>
+        <h2>Recommendations for {stock}</h2>
         <div className="table">
           <table cellPadding={0} cellSpacing={0}>
             <thead>
