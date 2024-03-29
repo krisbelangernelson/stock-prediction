@@ -39,13 +39,8 @@
 
         & > svg {
           cursor: pointer;
-          /* fill: #ccc; */
           fill: #ff6868
         }
-
-        /* & > svg:hover path {
-          fill: #ff6868
-        } */
       }
     }
   }

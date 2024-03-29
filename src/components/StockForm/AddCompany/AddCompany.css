@@ -60,12 +60,7 @@
     padding-top: 0.25rem;
 
     & > svg {
-      /* fill: #222; */
       fill: #1fa9f8
     }
-
-    /* & > svg:hover path {
-      fill: #1fa9f8
-    } */
   }
 }
