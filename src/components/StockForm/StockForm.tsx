@@ -3,8 +3,8 @@ import SocialMediaInfo from './SocialMediaInfo/SocialMediaInfo';
 import './StockForm.css'
 import StockList from './StockList';
 import TimeWindow from './TimeWindow/TimeWindow';
-import companiesFile from '../../mocks/data/companyData'
-import { StockFormProps } from '../../types/stock';
+import companiesFile from '@/mocks/data/companyData'
+import { StockFormProps } from '@/types/stock';
 import { useState } from 'react';
 import AddCompany from './AddCompany/AddCompany';
 

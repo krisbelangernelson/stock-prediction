@@ -1,7 +1,7 @@
 
-import recommendationRating from '../../utils/recommendationRating'
+import recommendationRating from '@/utils/recommendationRating'
 import './StockTable.css'
-import { StockTableProps } from '../../types/stock';
+import { StockTableProps } from '@/types/stock';
 
 export default function StockTable(props: StockTableProps) {
   const { stockSelected, data } = props

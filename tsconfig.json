@@ -21,9 +21,13 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "types": ["vite-plugin-svgr/client"]
+    "types": ["vite-plugin-svgr/client"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+    },
   },
-  "include": ["src", "custom.d.ts"],
-  "exclude": ["coverage", "jest.config.ts"],
+  "include": ["src", "custom.d.ts", "jest.config.ts", "setupJest.ts"],
+  "exclude": ["coverage"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

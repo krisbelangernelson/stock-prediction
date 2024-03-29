@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react"
-import TimeWindow from "../TimeWindow/TimeWindow"
+import TimeWindow from "../TimeWindow"
 
 const setTimeWindow = jest.fn()
 

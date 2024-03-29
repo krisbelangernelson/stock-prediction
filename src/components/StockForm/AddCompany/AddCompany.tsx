@@ -1,6 +1,6 @@
 import { useState } from "react"
-import PlusIcon from "../../../assets/icons/plus-circle-1441.svg?react"
-import { AddCompanyProps } from "../../../types/stock"
+import PlusIcon from "@/components/shared/PlusIcon"
+import { AddCompanyProps } from "@/types/stock"
 import './AddCompany.css'
 
 export default function AddCompany(props: AddCompanyProps) {
@@ -30,8 +30,8 @@ export default function AddCompany(props: AddCompanyProps) {
         <input type="text" name="symbol" id="symbol" value={symbol} onChange={(e) => { setSymbol(e.target.value) }} maxLength={6} />
         <label htmlFor="name" className="name">Name</label>
         <input type="text" name="name" id="name" value={name} onChange={(e) => { setName(e.target.value) }} maxLength={20} />
-        <div>
-          <PlusIcon height="16px" width="16px" onClick={onClickAddStock} />
+        <div onClick={onClickAddStock}>
+          <PlusIcon width="16px" height="16px" />
         </div>
       </div>
       {error && <div className="red">{error}</div>}

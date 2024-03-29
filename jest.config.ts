@@ -24,12 +24,13 @@ const config: Config = {
     '!<rootDir>/src/main.tsx'
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '\\.(css)$': '<rootDir>/src/mocks/styleMock.ts',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|gif|ttf|eot)$': '<rootDir>/src/mocks/fileMock.ts'
   },
   setupFilesAfterEnv: [
     '<rootDir>/setupJest.ts'

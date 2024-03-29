@@ -1,4 +1,4 @@
-import { SocialMediaInfoProps } from "../../../types/stock"
+import { SocialMediaInfoProps } from "@/types/stock"
 import './SocialMediaInfo.css'
 
 export default function SocialMediaInfo(props: SocialMediaInfoProps) {

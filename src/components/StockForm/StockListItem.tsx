@@ -1,4 +1,4 @@
-import { StockListItemProps } from "../../types/stock"
+import { StockListItemProps } from "@/types/stock"
 
 export default function StockListItem(props: StockListItemProps) {
   const { setStockSelected, stockSelected, symbol } = props
