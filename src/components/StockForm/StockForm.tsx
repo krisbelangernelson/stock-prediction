@@ -1,12 +1,12 @@
 
-import SocialMediaInfo from './SocialMediaInfo/SocialMediaInfo';
-import './StockForm.css'
-import StockList from './StockList';
-import TimeWindow from './TimeWindow/TimeWindow';
+import { useState } from 'react';
 import companiesFile from '@/mocks/data/companyData'
 import { StockFormProps } from '@/types/stock';
-import { useState } from 'react';
+import SocialMediaInfo from './SocialMediaInfo/SocialMediaInfo';
+import StockList from './StockList';
+import TimeWindow from './TimeWindow/TimeWindow';
 import AddCompany from './AddCompany/AddCompany';
+import './StockForm.css'
 
 export default function StockForm(props: StockFormProps) {
   const { setStockSelected, stockSelected, timeWindow, setTimeWindow, data } = props
@@ -23,7 +23,6 @@ export default function StockForm(props: StockFormProps) {
   const handleAddCompany = (symbol: string, name: string) => {
     const newCompany = { symbol, name }
     setCompanies((prev) => ([...prev, newCompany]))
-    // setStockSelected('')
   }
 
   return (

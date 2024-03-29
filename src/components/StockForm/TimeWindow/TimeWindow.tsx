@@ -1,4 +1,4 @@
-import { TimeWindowProps } from "../../../types/stock"
+import { TimeWindowProps } from "@/types/stock"
 import './TimeWindow.css'
 
 export default function TimeWindow(props: TimeWindowProps) {

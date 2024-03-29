@@ -1,6 +1,6 @@
-import StockListItem from "./StockListItem"
 import { StockListProps } from "@/types/stock"
 import MinusIcon from "@/components/shared/MinusIcon"
+import StockListItem from "./StockListItem"
 
 export default function StockList(props: StockListProps) {
   const { setStockSelected, stockSelected, companies, handleRemoveCompany } = props
