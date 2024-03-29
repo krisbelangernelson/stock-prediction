@@ -9,7 +9,9 @@ export default function StockList(props: StockListProps) {
       <div className="stock-list-items">
         {companies.map((company) => (
           <div key={company.name} className="items-row">
-            <div onClick={() => { handleRemoveCompany(company.name) }}><MinusIcon height="16px" width="16px" /></div>
+            <div onClick={() => { handleRemoveCompany(company.name) }}>
+              <MinusIcon height="16px" width="16px" />
+            </div>
             <StockListItem key={company.symbol} stockSelected={stockSelected} setStockSelected={setStockSelected} symbol={company.symbol} />
           </div>
         ))}

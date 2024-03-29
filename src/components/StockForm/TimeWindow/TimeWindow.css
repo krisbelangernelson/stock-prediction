@@ -1,8 +1,11 @@
 .time-window {
+  text-align: center;
+
   & .time-title {
     font-size: 1.2rem;
     line-height: 1.2rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
   }
 
   & select {
@@ -16,5 +19,9 @@
     &:hover {
       background-color: #eee;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
   }
 }

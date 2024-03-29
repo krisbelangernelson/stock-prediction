@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { CompanyData, Companies } from './apiData';
+import { CompanyData, Company, Companies } from './apiData';
 
 export interface StockProps {
   setStockSelected: Dispatch<SetStateAction<string>>
@@ -23,14 +23,16 @@ export interface StockListItemProps extends StockProps {
 }
 
 export interface SocialMediaInfoProps {
-  company: {
-    symbol: string
-    name: string
-  }
+  company: Company
   data: CompanyData
 }
 
 export interface StockTableProps {
   stockSelected: string
   data: CompanyData
+}
+
+export interface AddCompanyProps {
+  handleAddCompany: (symbol: string, name: string) => void
+  companies: Companies
 }

@@ -1,0 +1,29 @@
+.social-media-info{
+  min-width: 10rem;
+
+  & .company-name {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  & .social-data {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    overflow: auto;
+
+    & .data-headers {
+      text-align: left;
+
+      & > div {
+        font-weight: 600;
+      }
+    }
+
+    & .data-row {
+      & > div {
+        padding: 0 0.3rem;
+      }
+    }
+  }
+}

@@ -4,7 +4,9 @@ export type CompanyData = {
   socialMediaCount: number;
 }[]
 
-export type Companies = {
+export type Company = {
   symbol: string;
   name: string;
-}[]
+}
+
+export type Companies = Company[]

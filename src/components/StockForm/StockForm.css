@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem 0;
+  gap: 2rem 0;
   padding: 1rem;
 
   @media screen and (min-width: 768px) {
@@ -22,9 +22,10 @@
 .stock-list {
   display: flex;
   justify-content: center; 
-  min-width: 5rem;;
-  
-  & .stock-list-items {
+  min-width: 6rem;
+}
+
+.stock-list-items {
     text-align: left;
 
     & .items-row {
@@ -33,48 +34,24 @@
       align-items: center;
 
       & div:has(> svg) {
-        cursor: pointer;
         padding-top: 0.4rem;
         padding-right: 0.25rem;
 
         & > svg {
-          fill: #ccc;
-        }
-
-        & > svg:hover path {
+          cursor: pointer;
+          /* fill: #ccc; */
           fill: #ff6868
         }
+
+        /* & > svg:hover path {
+          fill: #ff6868
+        } */
       }
     }
   }
-}
 
-.social-media-info{
-  min-width: 10rem;
-
-  & .company-name {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-
-  & .social-data {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.5rem;
-    overflow: auto;
-
-    & .data-headers {
-      text-align: left;
-
-      & > div {
-        font-weight: 600;
-      }
-    }
-
-    & .data-row {
-      & > div {
-        padding: 0 0.3rem;
-      }
-    }
-  }
+.form-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
