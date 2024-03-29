@@ -13,16 +13,17 @@ export default function StockForm(props: StockFormProps) {
   const [companies, setCompanies] = useState(companiesFile)
   const company = companies.find((company) => company.symbol === stockSelected)
 
-  const handleRemoveCompany = (name: string) => {
-    const newCompanies = companies.filter((company) => company.name !== name)
+  const handleRemoveCompany = (symbol: string) => {
+    const newCompanies = companies.filter((company) => company.symbol !== symbol)
     setCompanies(newCompanies)
-    setStockSelected('')
+
+    if (stockSelected === symbol) setStockSelected('')
   }
 
   const handleAddCompany = (symbol: string, name: string) => {
     const newCompany = { symbol, name }
     setCompanies((prev) => ([...prev, newCompany]))
-    setStockSelected('')
+    // setStockSelected('')
   }
 
   return (
